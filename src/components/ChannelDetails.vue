@@ -56,6 +56,7 @@ export default {
   methods: {
     ...mapActions("channels", ["addMessageToChannel"]),
     sendMessage() {
+      console.log("add msg ---", this.id);
       this.addMessageToChannel({
         id: this.id,
         message: this.newMessage,

@@ -54,7 +54,7 @@
             <td>{{ item.firstName }}</td>
             <td>{{ item.lastName }}</td>
             <td>{{ item.email }}</td>
-            <td>{{ item.technology }}</td>
+            <td>{{ item.role }}</td>
 
             <td>
               <v-btn
@@ -104,9 +104,9 @@ export default {
         },
         { text: "Email", align: "center", value: "email", width: "120px" },
         {
-          text: "Technology",
+          text: "Role",
           align: "center",
-          value: "technology",
+          value: "role",
           width: "100px",
         },
 

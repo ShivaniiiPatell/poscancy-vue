@@ -7,9 +7,10 @@ const mutations = {
   ADD_CHANNEL(state, channel) {
     state.channels.push(channel);
   },
-  ADD_MESSAGE(state, { channelId, message }) {
+  ADD_MESSAGE(state, { id, message }) {
     console.log("chaneskk---", state.channels);
-    const channel = state.channels.find((c) => c.id === channelId);
+    console.log("getting channel id", id);
+    const channel = state.channels.find((c) => c.id == id);
     console.log("find channle", channel);
     if (channel) {
       console.log("inside chan", message);
@@ -27,10 +28,10 @@ const actions = {
     const newChannel = { ...channel, id: newId, messages: [] };
     commit("ADD_CHANNEL", newChannel);
   },
-  addMessageToChannel({ commit }, { channelId, message }) {
-    channelId = Number(channelId);
+  addMessageToChannel({ commit }, { id, message }) {
+    console.log("channelId----action", id);
     console.log("message----", message);
-    commit("ADD_MESSAGE", { channelId, message });
+    commit("ADD_MESSAGE", { id, message });
   },
 };
 
