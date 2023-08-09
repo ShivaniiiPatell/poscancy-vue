@@ -24,28 +24,19 @@ const mutations = {
 const actions = {
   async fetchAllUsers({ rootState, commit }) {
     try {
-      // Retrieve the token from the auth store module
       const token = rootState.auth.userToken;
       console.log("token", token);
-      // Make the API request with the token in the Authorization header
-      // const response = await axios.get("/users", {
-      //   headers: {
-      //     Authorization: `Bearer ${token}`,
-      //   },
-      // });
       const response = await axios.get(`http://localhost:3000/api/users`, {
         headers: {
           "Content-Type": "application/json; charset=UTF-8",
           Authorization: `Bearer ${token}`,
         },
       });
-
-      // Save the fetched users in the Vuex store
       const users = response.data;
       console.log("users", users);
       commit("SET_USERS", users);
     } catch (error) {
-      // Handle the error
+      console.log(error);
     }
   },
   async addUser({ rootState, commit }, userData) {
@@ -69,7 +60,7 @@ const actions = {
       console.log("newUser", newUser);
       commit("ADD_USER", newUser);
     } catch (error) {
-      // Handle the error
+      console.log(error);
     }
   },
   async deleteUser({ rootState, commit }, userId) {
@@ -86,7 +77,7 @@ const actions = {
       // Remove the deleted user from the store
       commit("REMOVE_USER", userId);
     } catch (error) {
-      // Handle the error
+      console.log(error);
     }
   },
 };

@@ -14,10 +14,9 @@ const getters = {
 const mutations = {
   SET_USER_TOKEN(state, token) {
     state.userToken = token;
-    localStorage.setItem("userToken", token); // Set the user token in local storage
+    localStorage.setItem("userToken", token);
   },
   SET_LOGIN_ERROR(state, error) {
-    // Mutation to set login error
     state.loginError = error;
   },
   LOGOUT(state) {
@@ -29,7 +28,6 @@ const mutations = {
 const actions = {
   async signIn({ commit }, { email, password }) {
     try {
-      // Make the login API call and get the token
       console.log("inside sign in");
       const response = await axios.post(
         `http://localhost:3000/api/users/login`,

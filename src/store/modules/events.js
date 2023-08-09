@@ -53,7 +53,7 @@ const actions = {
       const events = response.data;
       commit("SET_EVENTS", events);
     } catch (error) {
-      // Handle the error
+      console.log(error);
     }
   },
 
@@ -72,7 +72,7 @@ const actions = {
       const newEvent = response.data;
       commit("ADD_EVENT", newEvent);
     } catch (error) {
-      // Handle the error
+      console.log(error);
     }
   },
   async updateEvent({ commit }, payload) {
@@ -95,7 +95,7 @@ const actions = {
 
       commit("UPDATE_EVENT", updatedEvent);
     } catch (error) {
-      // Handle the error
+      console.log(error);
     }
   },
 };

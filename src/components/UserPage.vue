@@ -141,7 +141,7 @@ export default {
       console.log("new user----------------", this.newUser);
       await this.addUser(this.newUser);
       await this.fetchAllUsers();
-      // this.clearForm();
+      this.clearForm();
     },
     async handleDeleteUser(item) {
       console.log("Delete user:", item);

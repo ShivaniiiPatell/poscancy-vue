@@ -28,7 +28,6 @@
           <router-link to="/user" class="d-flex align-center">
             <v-list-item-icon>
               <v-icon>mdi-account</v-icon>
-              <!-- Updated icon for User -->
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title class="text-primary">User</v-list-item-title>
@@ -40,7 +39,6 @@
           <router-link to="/event" class="d-flex align-center">
             <v-list-item-icon>
               <v-icon>mdi-calendar</v-icon>
-              <!-- Updated icon for Event -->
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title class="text-primary">Event</v-list-item-title>
@@ -52,7 +50,6 @@
           <router-link to="/channel" class="d-flex align-center">
             <v-list-item-icon>
               <v-icon>mdi-message</v-icon>
-              <!-- Updated icon for Channel -->
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title class="text-primary"
@@ -104,7 +101,7 @@ export default {
     ...mapMutations("auth", ["LOGOUT"]),
     logout() {
       this.LOGOUT();
-      this.$router.push({ name: "SignIn" }); // Redirect to the sign-in page
+      this.$router.push({ name: "SignIn" });
     },
   },
 };
