@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-card outlined class="mx-auto" max-width="350">
-      <v-card-title class="text-center">Sign Up</v-card-title>
+      <v-card-title class="text-center">Sign In</v-card-title>
       <v-card-text>
         <v-form>
           <v-text-field v-model="email" label="Email" outlined></v-text-field>

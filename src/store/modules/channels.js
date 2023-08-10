@@ -8,8 +8,8 @@ const mutations = {
     state.channels.push(channel);
   },
   ADD_MESSAGE(state, { id, message }) {
-    console.log("chaneskk---", state.channels);
-    console.log("getting channel id", id);
+    // console.log("chaneskk---", state.channels);
+    // console.log("getting channel id", id);
     const channel = state.channels.find((c) => c.id == id);
     console.log("find channle", channel);
     if (channel) {

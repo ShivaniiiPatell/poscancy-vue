@@ -62,7 +62,7 @@
     </v-navigation-drawer>
 
     <v-app-bar app dark color="primary">
-      <v-toolbar-title>My App</v-toolbar-title>
+      <v-toolbar-title>Poscancy</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn text v-if="!isSignInPage" @click="logout">Logout</v-btn>
     </v-app-bar>
